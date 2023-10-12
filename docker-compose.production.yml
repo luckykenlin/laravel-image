@@ -25,7 +25,7 @@ services:
     volumes:
       - product_db:/var/lib/mysql
 
-  # --- PHP 8.0
+  # --- Replace image for your application
   app:
     image: luckykenlin/laravel-app
     restart: unless-stopped
@@ -39,6 +39,7 @@ services:
       - "DB_HOST=db"
       - "REDIS_HOST=redis"
 
+  # --- Replace image for your application
   schedule:
     image: luckykenlin/ldp365
     restart: always
@@ -51,7 +52,7 @@ services:
       - "DB_HOST=db"
       - "REDIS_HOST=redis"
 
-  # --- nginx
+  # --- Replace image for your application
   web:
     image: laravel-web
     restart: unless-stopped
